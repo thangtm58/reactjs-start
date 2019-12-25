@@ -1,23 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import faker from 'faker';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sam
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 6:00PM</span>
-                    </div>
-                    <div className="text">Nice blog post!</div>
-                </div>
-            </div>
+            <CommentDetail 
+                author="Sam" 
+                timeAgo="Today at 4:45PM" 
+                content="Nice blog post!" 
+                avatar={faker.image.avatar()}
+            />
+            <CommentDetail 
+                author="Thang" 
+                timeAgo="Today at 2:45AM" 
+                content="I like the subject" 
+                avatar={faker.image.avatar()}
+            />
+            <CommentDetail 
+                author="Alex" 
+                timeAgo="Yesterday at 1:45PM" 
+                content="That is awesome!" 
+                avatar={faker.image.avatar()}
+            />
         </div>
     );
 };
@@ -28,4 +34,4 @@ ReactDOM.render(
 );
 
 
-//https://semantic-ui.com
+//https://semantic-ui.com 
