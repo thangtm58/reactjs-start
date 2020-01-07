@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
                             type="text"
                             value={this.state.term}
                             onChange={(e) => this.setState({ term: e.target.value })} //.toUpperCase()
-                            placeholder="Text di dmm"
+                            placeholder="Text"
                         />
                     </div>
                 </form>
